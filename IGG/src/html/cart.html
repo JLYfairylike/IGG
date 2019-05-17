@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车-IGG</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/list.css">
+
+</head>
+
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <p class="innerTopLink"><a href="/">首页</a>>购物车</p>
+        <div class="cart-list">
+            <div class="left" id="left">
+                <div class="header">
+                    <div id="allCheck"><input type="checkbox" class="allCheck" />全选</div>
+                    <span>产品</span>
+                    <b>价格</b>
+                    <i>数量</i>
+                    <em>小计</em>
+                    <em class="em">操作</em>
+                </div>
+                <ul id="list-container">
+                    <!-- list容器 -->
+                </ul>
+                <div class="footer">
+                    <p>总计：<span id="totalMoney">0</span></p>
+                    <button class="ppp">结算</button>
+                </div>
+                <script type="text/html" id="cart-template">
+                    {{each cart item}}
+                    <li class="shop-list" data-id="{{item.id}}">
+                        <input type="checkbox" id="check" />
+                        <img src="{{item.imgs[0]}}">
+                        <div class="info">
+                            <h2>{{item.title}}</h2>
+                            <p>游戏：王者荣耀</p>
+                            <p>介绍：送给喜新厌旧的你</p>
+                        </div>
+
+                        <div class="num">
+                            <span class="reduceNum">-</span>
+                            <input type="text" value="{{item.num}}" class="inputNum">
+                            <span class="addNum">+</span>
+                        </div>
+                        <div class="price">￥{{item.price}}</div>
+                        <div class="sumPrice">￥{{item.price * item.num}}</div>
+                        <div class="doIt">
+                            <button class="delete">删除</button>
+                            <button class="payMoney">结算</button>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+
+</html>

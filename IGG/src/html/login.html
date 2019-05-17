@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>登入 - IGG帐户管理</title>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<div id="container" class="container fullpage">
+        <div id="header">
+        <h2 class="logo"><img src="/images/logo.png" alt="IGG" /></h2>
+        <h1 class="pageTitle">登入</h1>
+        <div class="headerBtn"><a href="register.html">注册</a></div>
+    </div>
+    <div class="fullWrapper">
+        <div class="loginForm">
+            <form  id="form">
+            <div class="formElement">
+                <label><div class="label">IGG帐户</div></label>
+                <input type="text" id="username" class="inputBlock inputText " name="username"  placeholder="IGG帐户 / Email" />
+            </div>
+            <div class="formElement">
+                <label><div class="label">密码</div></label>
+                <input type="password" id="password" class="inputBlock inputText " name="password"  />
+                            </div>
+            
+            <div class="formBtn">
+                <input id="login" type="button" value="登录" class="normalButton" />
+            </div>
+            </form>
+            <div class="signinGuide">
+                <a href="./getpass.php?url=https%3A%2F%2Fpassport.igg.com%2F">忘记密码？</a><br />
+                还没有IGG帐户？<a href="./register.html">马上注册</a>
+            </div>
+            <div class="signinMore">
+                或使用以下帐户登入：
+                <ul class="clearfix">
+                    <li><a href="/account/connect.php?provider=facebook&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconFacebookWide">Facebook 登录</a></li>
+                    <li><a href="/account/connect.php?provider=google&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconGoogleWide">Google 登录</a></li>
+                </ul>
+                <ul class="clearfix">
+                    <li><a href="/account/connect.php?provider=yahoo&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconYahoo"></a></li>
+                    <li><a href="/account/connect.php?provider=msn&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconMsn"></a></li>
+                    <li><a href="/account/connect.php?provider=twitter&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconTwitter"></a></li>
+                    <li><a href="/account/connect.php?provider=linkedin&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconLinkedin"></a></li>
+                                        <li><a href="/account/connect.php?provider=wechat&amp;gid=&amp;url=https%3A%2F%2Fpassport.igg.com%2F" class="iconWeChat"></a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+        <ul>
+            <li>&copy; 2019 IGG Inc. All Rights Reserved.</li>
+            <li><a href="http://www.igg.com/contact/">联系我们</a></li>
+            <li><a style="cursor:pointer;" id="language">中文(简体)</a></li>
+        </ul>
+    </div>
+    
+<script src="/lib/requirejs/require.js" data-main="/js/login.js"></script>
+</body>
+</html>

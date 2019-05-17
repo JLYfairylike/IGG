@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>注册 - IGG帐户管理</title>
+<link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+
+<div id="container" class="container fullpage">
+        <div id="header">
+        <h2 class="logo"><img src="/images/logo.png" alt="IGG" /></h2>
+        <h1 class="pageTitle">注册</h1>
+        <div class="headerBtn"><a href="login.html">登入</a></div>
+    </div>
+    <div class="fullWrapper">
+        <div class="loginForm">
+            <form id="form">
+                        <div class="formElement">
+                <label>
+                    <div class="label">用户名</div>
+                    <input type="text" id="username" name="username" value="" class="inputText" />
+                </label>
+            </div>
+            <div class="formElement">
+                <label>
+                    <div class="label">密码</div>
+                    <input type="password" id="password" name="password" class="inputText" />
+                </label>
+                <span class="errorMsg" style="display:none;">8-16个英文数字组合，至少包含一个数字以及一个字母</span>
+            </div>
+            <div class="formElement">
+                <label>
+                    <div class="label">确认密码</div>
+                    <input type="password" id="passwordOk" name="passwordOk" class="inputText" />
+                </label>
+                <span class="errorMsg" style="display:none;">两次输入的密码不一致</span>
+            </div>
+            <div class="formElement">
+                <label><input type="checkbox" id="agree" /> 我同意<a href="http://www.igg.com/member/agreement.php" target="_blank">IGG服务条款</a>并且年龄大于18岁。</label>
+                <span class="errorMsg" style="display:none;">You are required to agree to abide by IGG terms and conditions, and confirm that you are older than 18 years of age.</span>
+            </div>
+            <div class="formBtn">
+                <input id="register" type="button" value="注册" class="normalButton" />
+            </div>
+            </form>
+
+
+            <div class="signinMore">
+                已经拥有IGG账号?请<a href="./login.html">在这里登入</a>。或使用以下账户登入：
+                <ul class="clearfix">
+                    <li><a href="./connect.php?provider=google&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconGoogle">使用Google登入</a></li>
+                    <li><a href="./connect.php?provider=facebook&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconFacebook">使用Facebook登入</a></li>
+                    <li><a href="./connect.php?provider=twitter&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconTwitter">使用Twitter登入</a></li>
+                    <li><a href="./connect.php?provider=yahoo&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconYahoo">使用雅虎登入</a></li>
+                    <li><a href="./connect.php?provider=msn&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconMsn">使用MSN登入</a></li>
+                    <li><a href="./connect.php?provider=linkedin&amp;gid=&url=https%253A%252F%252Fstore.igg.com%252F" class="iconLinkedin">使用LinkedIn登入</a></li>
+                                        <li><a href="./connect.php?provider=wechat&amp;gid=&amp;url=https%253A%252F%252Fstore.igg.com%252F" class="iconWeChat"></a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>&copy; 2019 IGG Inc. All Rights Reserved.</li>
+            <li><a href="http://www.igg.com/contact/">联系我们</a></li>
+            <li><a style="cursor:pointer;" id="language">中文(简体)</a></li>
+        </ul>
+    </div>
+</div>
+<script src="/lib/requirejs/require.js" data-main="/js/register.js"></script>
+
+</body>
+</html>
+    

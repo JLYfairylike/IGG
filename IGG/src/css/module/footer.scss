@@ -1,0 +1,147 @@
+.footer{
+    .back-top {
+        height: 60px;
+        line-height: 60px;
+        
+        width: 100%;
+        background: #f6f5f5;
+        text-align: center;
+        transition: all .125s ease;
+        a{
+            font-size: 16px;
+            color: #444444;
+            &:hover {
+                color: #a6cc63;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer-site {
+        max-width: 1703px;
+        margin: 40px auto 40px auto;
+        height: 260px;
+        .site-item {
+            float: left;
+            width: 16.5%;
+            &:first-child {
+                .site-item-son {
+                    margin-right: auto;
+                    margin-left: 0;
+                } 
+            }
+            &:last-child {
+                .site-item-son {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+            .site-item-son {
+                max-width: 265px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .heading {
+                .icon {
+                    background-image: url(/images/sprite.png);
+                    background-repeat: no-repeat;
+                    width: 68px;
+                    height: 68px;
+                    margin: 0 auto;
+                }
+                .title {
+                    font-size: 16px;
+                    line-height: 16px;
+                    margin: 20px 0;
+                    font-weight: lighter;
+                }
+            }
+            .body {
+                .site-item-list  {
+                    .item {
+                        .link {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 14px;
+                            color: #444444;
+                            transition: all .125s ease;
+                            display: block;
+                            position: relative;
+                            .QR {
+                                display: none;
+                                width: 150px;
+                                height: 150px;
+                                background: url(/images/qr.png) no-repeat center;
+                                background-size: contain;
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                right: -50px;
+                                bottom: 0;
+                            }
+                            &:hover {
+                                color: #a6cc63;
+                            }
+                        }
+                        .no-url:hover {
+                            color: #444444;
+                        }
+                    }
+                }
+            }
+        }
+        .Guide {
+            .heading {
+                .icon {
+                    background-position: -1px -68px;
+                }
+            }
+        }
+        .Payment {
+            .heading  {
+                .icon {
+                    background-position: -205px -68px;
+                }
+            }
+        }
+        .Delivery {
+            .heading  {
+                .icon {
+                    background-position: -137px -68px;
+                }
+            }
+        }
+        .Contact {
+            .heading  {
+                .icon {
+                    background-position: -69px -68px;
+                }
+            }
+        }
+        .Others {
+            .heading  {
+                .icon {
+                    background-position: -273px -68px;
+                }
+            }
+        }
+        .Attention {
+            .heading  {
+                .icon {
+                    background-position: -205px -171px;
+                }
+            }
+        }
+    }  
+    .copyright {
+        text-align: center;
+        padding: 0 0 40px 0;
+    }
+    .footer-logo {
+        margin: 0 auto 40px auto;
+        width: 90px;
+        height: 60px;
+        background: url(/images/sprite.png) no-repeat -432px 0;
+    }
+    .copyright-text {
+        font-size: 16px;
+    }
+}

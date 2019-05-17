@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>商品列表-IGG</title>
+    <link rel="stylesheet" href="/css/detail.css" />
+    <link rel="stylesheet" href="/css/list.css" />
+
+</head>
+
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <!-- 导航标题 -->
+        
+        
+
+        <!-- detail容器 -->
+        <p class="innerTopLink"><a href="/">首页</a><a href="/html/list.html">>列表页</a>>购物车</p>
+        <div class="detail" id="detail"></div>
+        <script type="text/html" id="detail-template">
+
+            <div class="picture">
+
+                <div class="view_thumbs" id="gal1">
+                    <div class="view_bd">
+                        <img class="zoom-img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}" />
+                    </div>
+                    <ul class="view-ul">
+                        <li class="current">
+                            <a href="javascript:;" data-image="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}">
+                                <img class="s" src="{{data.imgs[0]}}" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{data.imgs[1]}}" data-zoom-image="{{data.imgs[1]}}">
+                                <img class="s" src="{{data.imgs[1]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{data.imgs[2]}}" data-zoom-image="{{data.imgs[2]}}">
+                                <img class="s" src="{{data.imgs[2]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-image="{{data.imgs[3]}}" data-zoom-image="{{data.imgs[3]}}">
+                                <img class="s" src="{{data.imgs[3]}}" /></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="description">
+                <h2>{{data.title}}</h2>
+                <p class="price">价格：<b>￥{{data.price}}</b></p>
+                <div class="you-save after">
+                    <span class="price-name">立减:</span>
+                    <span class="price-much">208.27元(8.6折优惠 )  </span>
+                </div>
+                <div class="item-star after">
+                    <div class="igg-stars stars5"></div>
+                    <div class="star-info"> 5.0 </div>
+                </div>
+                <div class="hr"></div>
+                <div class="model" id="model">
+                    <p>游戏：</p>
+                    <span>王者荣耀</span>
+                </div>
+                <div class="style">
+                    <p>介绍：</p>
+                    <span>送给喜新厌旧的你</span>
+                </div>
+                <div class="clearfix">
+                    <span>购买数量：</span>
+                    <a class=" count_reduce" href="javascript:void(0)">-</a>
+                    <p><input type="text" value="1" id="buyCount" class="shop_count" readonly="readonly" />
+                    </p>
+                    <a class=" count_add" href="javascript:void(0)">+</a>
+                    <span id="count" class="fl">（剩余库存{{data.store}}件）</span></div>
+                <div class="hr"></div>
+                <div class="shopping_btn">
+                    <a id="shopcart" href="javascirpt:;">加入购物车</a>
+                </div>
+
+        </script>
+        
+
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/detail.js"></script>
+</body>
+
+</html>

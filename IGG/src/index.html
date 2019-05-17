@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>IGG周边商城 官方网站 - 王国纪元、城堡争霸</title>
+<link rel="stylesheet" href="/lib/swiper/css/swiper.min.css">
+<link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header id="header-container"></header>
+	<main>
+		<!-- 轮播图 -->
+		<div class="swiper-container">
+				<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a target='_blank' class='link' href='https://store.igg.com/product/index'><img src='//statics.igg.com/shop/goods/2019/03/26/201903260c70512f4b95bbf5c55831434b08b95936844.jpg' ></a></div>
+								<div class="swiper-slide">
+							<a target='_blank' class='link' href='http://store.igg.com/product/index?level=1&category_id=50&active_id=50'><img src='//statics.igg.com/shop/goods/2019/01/25/2019012570e28c6c73163407625c63060dd5a4f114244.jpg' ></a></div>
+								<div class="swiper-slide">
+							<a target='_blank' class='link' href='http://store.igg.com/product/index?active_id=1&gcid=1051&sale_name=&level=2&category_id=9'><img src='//statics.igg.com/shop/goods/2018/07/25/67897b1dfc1c59cf32854b5994115c0826831.jpg' ></a></div>
+						</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				
+				<!-- Add Arrows -->
+				<div class="swiper-button-next btn"></div>
+				<div class="swiper-button-prev btn"></div>
+				
+		</div>
+		<!-- list的盒子 -->
+		<h3 class="title">---最新商品---</h3>
+		<div id="list-container"></div>
+		<script type="text/html" id="list-monopoly">
+			<ul>
+				{{each list item}}
+					<li>
+						<a href="/html/list.html?type=3"><img src="{{item.image}}"></a>
+						<p>{{item.title}}</p>
+					</li>
+				{{ /each}}	
+			</ul>
+		</script>
+		<h3 class="title">---热门商品---</h3>
+		<div id="list-container1"></div>
+		<script type="text/html" id="list-monopoly1">
+			<ul>
+				{{each list item}}
+					<li>
+						<a href="/html/list.html?type=3"><img src="{{item.image}}"></a>
+						<p>{{item.title}}</p>
+					</li>
+				{{ /each}}	
+			</ul>
+		</script>
+		
+		
+		
+	</main>
+	<!-- footer容器 -->
+	<footer id="footer-container"></footer>
+	<script src="/lib/requirejs/require.js" data-main="/js/index"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="/css/list.css">
+    
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main> 
+        <!-- 导航标题 -->
+        <div class="list-content">
+    <div class="list-select">
+        <ul class="list after">
+            <li class="item">
+                <a class="link" href="/index">
+                    全部					</a>
+            </li>
+
+            <li class="item more ">
+                <a class="link " href="#">
+                    游戏					</a>
+                <ul class="list-list">
+                                        <li class="item-item ">
+                        <a class="link-link" href="#">王国纪元</a>
+                    </li>
+                                        <li class="item-item ">
+                        <a class="link-link" href="#">城堡争霸</a>
+                    </li>
+                                    </ul>
+            </li>
+
+            <li class="item more current ">
+                    <a class="link" href="#">
+                        数码配件
+                    </a>
+                    <ul class="list-list">
+                 <li class="item-item current-current">
+                                <a class="link-link" href="#">手机壳</a>
+                            </li> <li class="item-item ">
+                                <a class="link-link" href="#">手机支架</a>
+                            </li></ul>
+                </li><li class="item more ">
+                    <a class="link" href="#">
+                        收藏品
+                    </a>
+                    <ul class="list-list">
+                 <li class="item-item ">
+                                <a class="link-link" href="#">手办模型</a>
+                            </li></ul>
+                </li><li class="item  ">
+                    <a class="link" href="#">
+                        鼠标垫
+                    </a>
+                </li> <li class="item more  ">
+                    <a class="link" href="#">
+                        服饰
+                    </a>
+                    <ul class="list-list">
+                 <li class="item-item ">
+                                <a class="link-link" href="#">T恤</a>
+                            </li></ul>
+                </li><li class="item  ">
+                    <a class="link" href="#">
+                        杯子
+                    </a>
+                </li> 
+        </ul>
+        <ul class="list after sorption">
+            <li class="item more">
+                <a class="link" href="#">
+最新
+</a>
+<ul class="list-list">
+<li class="item-item current-current">
+    <a class="link-link" href="#">
+        最新
+    </a>
+</li>
+<li class="item-item ">
+    <a class="link-link" href="#">
+        人气
+    </a>
+</li>
+<li class="item-item ">
+    <a class="link-link" href="#">
+        价格由高到低
+    </a>
+</li>
+<li class="item-item ">
+    <a class="link-link" href="#">
+        价格由低到高
+    </a>
+</li>
+</ul>				</li>
+        </ul>
+    </div>
+    
+        <div id="shopItem" class="shopItem"></div>
+        <script type="text/html" id="list-template">
+            <ul class="list-item">
+                {{ each list item }}
+                <li>
+                    <a href="/html/detail.html?id={{item.id}}">
+                        <img class="list-imgs" src="{{item.image}}"  data-hover="{{item.hoverImage}}">
+                    </a>
+                    <span></span>
+                    <div class="product-name"><p class="item-icon"></p>{{item.title}}</div>
+                    <p>￥{{item.price}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>
